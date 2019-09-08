@@ -32,16 +32,16 @@ function custom_social_share_buttons_shortcode( $atts, $content = null ) {
 	$atts = shortcode_atts(
 		array(
 			'position'	=> '',
-			'title'		  => '',
-			'style'		  => 'default',
-			'width'		  => '',
+			'title'		=> '',
+			'style'		=> 'default',
+			'width'		=> '',
 	
 			'facebook'	=> 'show',
-			'twitter'	  => 'show',
+			'twitter'	=> 'show',
 			'pinterest'	=> 'show',
 			'linkedin'	=> 'show',
 			'whatsapp'	=> 'show',
-			'sms'		    => 'hide',
+			'sms'		=> 'hide',
 			'telegram'	=> 'hide',
 
 		),
