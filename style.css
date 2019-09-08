@@ -1,0 +1,255 @@
+/* Social Share Buttons
+---------------------------------------------------------------------------- */
+#social-share {
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  width: auto;
+}
+#social-share a,
+#social-share svg {
+  transition: none;
+}
+#social-share .ss-title:not(:empty) {
+  font-size: 20px;
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+#social-share .ss-link {
+  text-transform: none;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+}
+
+#social-share .ss-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#social-share .ss-link:not(:last-child) {
+  margin-right: 15px;
+}
+
+#social-share .ss-link {
+  display: inline-block;
+  float: ;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 0;
+  text-align: center;
+}
+
+#social-share .ss-link svg {
+  fill: #fff;
+  width: 18px;
+  height: 18px;
+  margin-top: 8px;
+}
+
+#social-share .ss-service-label {
+  display: none;
+}
+
+/* Social Service Styles
+--------------------------------------------- */
+#social-share .with-radius {
+  border-radius: 3px;
+}
+
+#social-share .with-width {
+  min-width: 50px;
+}
+
+#social-share .is-button {
+  min-width: 50px;
+  width: 10%;
+}
+
+#social-share .is-circle {
+  border-radius: 50%;
+}
+
+#social-share .is-square {
+  border-radius: 0;
+}
+
+/* Social Service Label */
+#social-share .ss-link.with-label {
+  display: inline-block;
+  float: none;
+  width: auto;
+  height: auto;
+  border-radius: 2px;
+  text-align: left;
+}
+
+#social-share .ss-link.with-label svg {
+  fill: #fff;
+  width: 18px;
+  height: 18px;
+  margin-top: 8px;
+}
+
+#social-share .with-label .ss-service-label {
+  color: #fff;
+  display: block !important;
+  float: left;
+  font-size: 14px;
+  margin: 4px 11px 0 0;
+  line-height: 15px;
+  letter-spacing: normal;
+}
+#social-share .with-label .ss-service-icon {
+  float: left;
+  display: block;
+  margin: 6px 8px 6px 6px;
+}
+
+#social-share .with-label .ss-service-icon svg {
+  fill: #fff;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+}
+#social-share .ss-link.with-label:not(:last-child) {
+  margin-right: 5px;
+}
+
+/* Social Service Colors
+--------------------------------------------- */
+#social-share .ss-facebook {
+  background-color: #4267b2;
+  background-color: #3c5a99;
+}
+
+#social-share .ss-twitter {
+  background-color: #00b6f1;
+  background-color: #1da1f2;
+}
+
+#social-share .ss-pinterest {
+  background-color: #cb2027;
+  background-color: #bd081c;
+}
+
+#social-share .ss-linkedin {
+  background-color: #0077b5;
+}
+
+#social-share .ss-whatsapp {
+  background-color: #25d366;
+}
+
+#social-share .ss-sms {
+  background-color: #333;
+}
+#social-share .ss-telegram {
+  background-color: #0088cc;
+}
+
+/* Border style colors
+--------------------------------------------- */
+#social-share .with-border {
+  background-color: transparent;
+  border: 2px solid;
+}
+#social-share .with-border:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+
+#social-share .with-border .ss-service-icon svg {
+  fill: transparent;
+  margin-top: 6px;
+}
+
+#social-share .with-border.ss-facebook,
+#social-share .with-border.ss-facebook svg {
+  border-color: #4267b2;
+  fill: #4267b2;
+}
+
+#social-share .with-border.ss-twitter,
+#social-share .with-border.ss-twitter svg {
+  border-color: #00b6f1;
+  fill: #00b6f1;
+}
+
+#social-share .with-border.ss-pinterest,
+#social-share .with-border.ss-pinterest svg {
+  border-color: #cb2027;
+  fill: #cb2027;
+}
+
+#social-share .with-border.ss-linkedin,
+#social-share .with-border.ss-linkedin svg {
+  border-color: #0077b5;
+  fill: #0077b5;
+}
+
+#social-share .with-border.ss-whatsapp,
+#social-share .with-border.ss-whatsapp svg {
+  border-color: #25d366;
+  fill: #25d366;
+}
+
+#social-share .with-border.ss-sms,
+#social-share .with-border.ss-sms svg {
+  border-color: #333;
+  fill: #333;
+}
+
+#social-share .with-border.ss-telegram,
+#social-share .with-border.ss-telegram svg {
+  border-color: #0088cc;
+  fill: #0088cc;
+}
+
+#social-share .with-border:hover,
+#social-share .with-border:hover svg {
+  border-color: #000;
+  fill: #000;
+}
+
+/* Fixed Social Media Buttons for Desktop
+--------------------------------------------- */
+@media only screen and (min-width: 1180px) {
+  #social-share.in-left,
+  #social-share.in-right {
+    position: fixed;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 999999;
+    left: auto;
+    right: auto;
+    top: 50%;
+    transition: opacity 0.5s ease-in-out;
+    margin: 0 !important;
+  }
+
+  #social-share.in-left .ss-link,
+  #social-share.in-right .ss-link {
+    display: block;
+    margin: 5px 5px;
+  }
+
+  #social-share.in-left {
+    left: 0;
+  }
+  #social-share.in-right {
+    right: 0;
+  }
+
+  #social-share.in-left .ss-title:not(:empty) {
+    margin: 0;
+    margin-left: 5px;
+  }
+
+  #social-share.in-right .ss-title:not(:empty) {
+    margin: 0;
+    margin-right: 5px;
+  }
+}
