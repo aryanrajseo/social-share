@@ -3,6 +3,8 @@ Fastest Social Sharing Plugin for WordPress.
 
 # Usage
 
+[social-share]
+
 [social-share title="Default "]
 
 [social-share style="is-circle" title="Circle "]
@@ -22,6 +24,7 @@ Fastest Social Sharing Plugin for WordPress.
 Conditional Hide or Show Social Services.
 [social-share position="" linkedin="hide" sms="hide" telegram="hide" style=""]
 
+# in functions.php
 
 ```php
 add_filter( 'the_content', 'output_shortcode_content' );
