@@ -3,24 +3,21 @@ Fastest Social Sharing Plugin for WordPress.
 
 # Usage
 
-add_filter( 'the_content', 'output_shortcode_content' );
+[social-share title="Default "]
 
-function output_shortcode_content( $content ) {
+[social-share style="is-circle" title="Circle "]
 
+[social-share style="with-label" title="Label "]
 
-	if ( ! is_singular( array( 'post', '' ) )  ) {
+[social-share style="with-radius is-button" title="Button "]
 
-		return $content;
-	}
+[social-share style="with-border" title="Border Square "]
 
-	//shortcode
-	$before_shortcode	= do_shortcode( '[social-share style="with-label"]' );
-	$after_shortcode 	= do_shortcode( '[social-share style="is-circle"]' );
+[social-share style="with-border is-circle" title="Border Circle "]
 
-	//conditional content return
-	$before_content = $before_shortcode . $content;
-	$after_content 	= $content . $after_shortcode;
-	$full_content 	= $before_shortcode . $content . $after_shortcode;
+[social-share position="in-left" linkedin="hide" sms="hide" telegram="hide" style="" title="Left "]
 
-		return $full_content;
-}
+[social-share position="in-right" linkedin="hide" sms="hide" telegram="hide" style="" title="Right "]
+
+Conditional Hide or Show Social Services.
+[social-share position="" linkedin="hide" sms="hide" telegram="hide" style=""]
