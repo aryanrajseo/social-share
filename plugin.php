@@ -29,7 +29,7 @@ add_shortcode( 'social-share', 'custom_social_share_buttons_shortcode' );
 function custom_social_share_buttons_shortcode( $atts, $content = null ) {
 
 	// Attributes
-	$atts = shortcode_atts(
+	$ss_atts = shortcode_atts(
 		array(
 			'position'	=> '',
 			'title'		=> '',
@@ -82,34 +82,34 @@ function custom_social_share_buttons_shortcode( $atts, $content = null ) {
 	
 
 	// Construct output of the social share content
-	$content .= '<!-- Social Share --><div id="social-share" class="social-share-buttons '.$atts['position'].'"> <span class="ss-title">'.$atts['title'].'</span>';
+	$content .= '<!-- Social Share --><div id="social-share" class="social-share-buttons '.$ss_atts['position'].'"> <span class="ss-title">'.$ss_atts['title'].'</span>';
 	
-	if ( $atts['facebook'] !== "hide") {
-		$content .= '<a class="ss-link '.$atts['style'].' ss-facebook" href="'.$facebookURL.'" title="Share on Facebook" target="_blank" rel="nofollow noopener noreferrer" class="ss-button facebook"><span class="ss-service-icon">'.$facebookICON.' </span><span class="ss-service-label">Share</span></a>';
+	if ( $ss_atts['facebook'] !== "hide") {
+		$content .= '<a class="ss-link '.$ss_atts['style'].' ss-facebook" href="'.$facebookURL.'" title="Share on Facebook" target="_blank" rel="nofollow noopener noreferrer" class="ss-button facebook"><span class="ss-service-icon">'.$facebookICON.' </span><span class="ss-service-label">Share</span></a>';
 	}
 
-	if ( $atts['twitter'] !== "hide") {
-		$content .= '<a class="ss-link '.$atts['style'].' ss-twitter" href="'. $twitterURL .'" title="Share on Twitter" target="_blank" rel="nofollow noopener noreferrer" class="ss-button twitter"><span class="ss-service-icon">'.$twitterICON.' </span><span class="ss-service-label">Tweet</span></a>';
+	if ( $ss_atts['twitter'] !== "hide") {
+		$content .= '<a class="ss-link '.$ss_atts['style'].' ss-twitter" href="'. $twitterURL .'" title="Share on Twitter" target="_blank" rel="nofollow noopener noreferrer" class="ss-button twitter"><span class="ss-service-icon">'.$twitterICON.' </span><span class="ss-service-label">Tweet</span></a>';
 	}
 
-	if ( $atts['pinterest'] !== "hide") {
-		$content .= '<a class="ss-link '.$atts['style'].' ss-pinterest" href="'.$pinterestURL.'" data-pin-custom="true" title="Share on Pinterest" target="_blank" rel="nofollow noopener noreferrer" class="ss-button pinterest"><span class="ss-service-icon">'.$pinterestICON.' </span><span class="ss-service-label">Pin</span></a>';
+	if ( $ss_atts['pinterest'] !== "hide") {
+		$content .= '<a class="ss-link '.$ss_atts['style'].' ss-pinterest" href="'.$pinterestURL.'" data-pin-custom="true" title="Share on Pinterest" target="_blank" rel="nofollow noopener noreferrer" class="ss-button pinterest"><span class="ss-service-icon">'.$pinterestICON.' </span><span class="ss-service-label">Pin</span></a>';
 	}
 
-	if ( $atts['linkedin'] !== "hide") {
-		$content .= '<a class="ss-link '.$atts['style'].' ss-linkedin" href="'.$linkedinURL.'" title="Share on LinkedIn" target="_blank" rel="nofollow noopener noreferrer" class="ss-button linkedin"><span class="ss-service-icon">'.$linkedinICON.' </span><span class="ss-service-label">Share</span></a>';
+	if ( $ss_atts['linkedin'] !== "hide") {
+		$content .= '<a class="ss-link '.$ss_atts['style'].' ss-linkedin" href="'.$linkedinURL.'" title="Share on LinkedIn" target="_blank" rel="nofollow noopener noreferrer" class="ss-button linkedin"><span class="ss-service-icon">'.$linkedinICON.' </span><span class="ss-service-label">Share</span></a>';
 	}
 
-	if ( $atts['whatsapp'] !== "hide") {
-		$content .= '<a class="ss-link '.$atts['style'].' ss-whatsapp" href="'.$whatsappURL.'" title="Share on Whatsapp" target="_blank" rel="nofollow noopener noreferrer" class="ss-button whatsapp"><span class="ss-service-icon">'.$whatsappICON.' </span><span class="ss-service-label">Whatsapp</span></a>';
+	if ( $ss_atts['whatsapp'] !== "hide") {
+		$content .= '<a class="ss-link '.$ss_atts['style'].' ss-whatsapp" href="'.$whatsappURL.'" title="Share on Whatsapp" target="_blank" rel="nofollow noopener noreferrer" class="ss-button whatsapp"><span class="ss-service-icon">'.$whatsappICON.' </span><span class="ss-service-label">Whatsapp</span></a>';
 	}
 
-	if ( $atts['sms'] !== "hide") {
-		$content .= '<a class="ss-link '.$atts['style'].' ss-sms" href="'.$smsURL.'" title="Share in Message" target="_blank" rel="nofollow noopener noreferrer" class="ss-button sms"><span class="ss-service-icon">'.$smsICON.' </span><span class="ss-service-label">SMS</span></a>';
+	if ( $ss_atts['sms'] !== "hide") {
+		$content .= '<a class="ss-link '.$ss_atts['style'].' ss-sms" href="'.$smsURL.'" title="Share in Message" target="_blank" rel="nofollow noopener noreferrer" class="ss-button sms"><span class="ss-service-icon">'.$smsICON.' </span><span class="ss-service-label">SMS</span></a>';
 	}
 
-	if ( $atts['telegram'] !== "hide") {
-		$content .= '<a class="ss-link '.$atts['style'].' ss-telegram" href="'.$telegramURL.'" title="Share on Telegram" target="_blank" rel="nofollow noopener noreferrer" class="ss-button telegram"><span class="ss-service-icon">'.$telegramICON.' </span><span class="ss-service-label">Telegram</span></a>';
+	if ( $ss_atts['telegram'] !== "hide") {
+		$content .= '<a class="ss-link '.$ss_atts['style'].' ss-telegram" href="'.$telegramURL.'" title="Share on Telegram" target="_blank" rel="nofollow noopener noreferrer" class="ss-button telegram"><span class="ss-service-icon">'.$telegramICON.' </span><span class="ss-service-label">Telegram</span></a>';
 	}
 
 	$content .= '</div>';
