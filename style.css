@@ -5,10 +5,12 @@
   overflow: hidden;
   width: auto;
 }
+
 #social-share a,
 #social-share svg {
   transition: none;
 }
+
 #social-share .ss-title:not(:empty) {
   font-size: 20px;
   font-weight: normal;
